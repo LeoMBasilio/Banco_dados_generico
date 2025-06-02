@@ -1,6 +1,10 @@
+'''
+Módulo de visualização para gerenciar clientes.
+Este módulo contém a classe ClienteView, que define métodos para exibir menus, obter dados do usuário e mostrar mensagens.
+'''
 class ClienteView:
-    @staticmethod
     def menu():
+        """Exibe o menu principal para o gerenciamento de clientes."""
         print("\n====== MENU CLIENTE ======")
         print("1 - Cadastrar Cliente")
         print("2 - Listar Clientes")
@@ -9,20 +13,21 @@ class ClienteView:
         print("0 - Sair")
         return input("Escolha uma opção: ")
 
-    @staticmethod
     def obter_dados_cliente():
+        """Obtém os dados do cliente a serem cadastrados ou atualizados."""
+        print("\n=== Cadastro de Cliente ===")
         nome = input("Nome: ")
         email = input("Email: ")
         telefone = input("Telefone: ")
         endereco = input("Endereço: ")
         return nome, email, telefone, endereco
 
-    @staticmethod
     def obter_id_cliente():
+        """Obtém o ID do cliente para operações de atualização ou exclusão."""
         return int(input("ID do cliente: "))
 
-    @staticmethod
     def mostrar_clientes(clientes):
+        """Exibe a lista de clientes cadastrados."""
         if clientes:
             print("\n=== Lista de Clientes ===")
             for cliente in clientes:
@@ -31,6 +36,6 @@ class ClienteView:
         else:
             print("\nNenhum cliente encontrado.\n")
 
-    @staticmethod
     def mostrar_mensagem(mensagem):
+        """Exibe uma mensagem para o usuário."""
         print(f"\n{mensagem}\n")
