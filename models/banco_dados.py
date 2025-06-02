@@ -2,7 +2,7 @@ import sqlite3
 
 class DataBase:
     def __init__(self, banco):
-        self.conn = sqlite3.connect(banco)
+        self.conn = sqlite3.connect("data/"+banco)
         self.cursor = self.conn.cursor()
 
     def __str__(self):
